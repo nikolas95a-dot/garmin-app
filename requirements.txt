@@ -1,0 +1,5 @@
+garminconnect
+mcp
+PySide6
+pyqtgraph
+anthropic
