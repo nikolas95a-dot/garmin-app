@@ -1,10 +1,12 @@
 # Garmin Progreso (app de escritorio + servidor MCP)
 
 ```
-garmin_core.py    núcleo: login, SQLite local, sincronización, análisis
-garmin_app.py     app de escritorio (PySide6 + pyqtgraph)
-garmin_mcp.py     servidor MCP para Claude Code / Claude Desktop
-garmin_login.py   login por terminal (opcional; la app tiene su propio login)
+garmin_core.py       núcleo: login, SQLite local, sincronización, análisis
+garmin_app.py        app de escritorio (PySide6 + pyqtgraph)
+garmin_coach.py      coach con Claude por API: resumen de datos y chat (sin Qt)
+garmin_coach_ui.py   pestaña Coach de la app
+garmin_mcp.py        servidor MCP para Claude Code / Claude Desktop
+garmin_login.py      login por terminal (opcional; la app tiene su propio login)
 ```
 
 La app y el servidor MCP comparten la misma base: `~/garmin_data/garmin.db`.
@@ -12,7 +14,7 @@ La app y el servidor MCP comparten la misma base: `~/garmin_data/garmin.db`.
 ## Instalación (Ubuntu)
 
 ```bash
-mkdir -p ~/garmin_mcp && cd ~/garmin_mcp      # copiar acá los 4 .py
+mkdir -p ~/garmin_mcp && cd ~/garmin_mcp      # copiar acá los 6 .py y requirements.txt
 python3 -m venv .venv
 .venv/bin/pip install -U -r requirements.txt
 .venv/bin/python garmin_app.py
